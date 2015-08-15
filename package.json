@@ -1,0 +1,23 @@
+{
+  "name": "hacktron",
+  "version": "0.1.0",
+  "description": "A client for Hack.Chat using Electron and CoffeeScript.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/samuel.hodgkins/Hacktron.git"
+  },
+  "keywords": [
+    "electron",
+    "hackchat"
+  ],
+  "author": "Samuel Hodgkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/samuel.hodgkins/Hacktron/issues"
+  },
+  "homepage": "https://gitlab.com/samuel.hodgkins/Hacktron#README"
+}
