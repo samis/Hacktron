@@ -22,6 +22,7 @@
   },
   "homepage": "https://gitlab.com/samuel.hodgkins/Hacktron#README",
   "dependencies": {
-    "coffee-script": "^1.9.3"
+    "coffee-script": "^1.9.3",
+    "npmlog": "^1.2.1"
   }
 }
