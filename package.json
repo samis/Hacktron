@@ -4,7 +4,7 @@
   "description": "A client for Hack.Chat using Electron and CoffeeScript.",
   "main": "main.js",
   "scripts": {
-    "start": "coffee main.coffee",
+    "start": "cake start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
