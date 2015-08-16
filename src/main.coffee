@@ -1,5 +1,6 @@
 initalizeLogger = (callback) ->
   log = require('npmlog')
+  log.level = "info"
   log.heading = 'Hacktron'
   log.enableColor()
   callback
