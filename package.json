@@ -23,6 +23,10 @@
   "homepage": "https://gitlab.com/samuel.hodgkins/Hacktron#README",
   "dependencies": {
     "coffee-script": "^1.9.3",
+    "electron-compile": "^0.8.2",
     "npmlog": "^1.2.1"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.30.4"
   }
 }
