@@ -2,4 +2,4 @@
 task 'start', 'Start Hacktron', ->
   exec 'coffee main.coffee', (err, stdout, stderr) ->
     throw err if err
-    console.log stdout + stderr
+    process.stdout.write stdout + stderr
