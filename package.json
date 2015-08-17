@@ -2,9 +2,10 @@
   "name": "hacktron",
   "version": "0.1.0",
   "description": "A client for Hack.Chat using Electron and CoffeeScript.",
-  "main": "main.js",
+  "main": "src/preinit.js",
   "scripts": {
     "start": "cake start",
+    "prestart": "cake compile:preinit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

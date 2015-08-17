@@ -5,6 +5,10 @@ execPackageCommand = (command, callback) ->
     callback err, stdout, stderr
   return
 task 'start', 'Start Hacktron', ->
-  execPackageCommand 'coffee src/main.coffee', (err, stdout, stderr) ->
+  execPackageCommand 'coffee src/preinit.js', (err, stdout, stderr) ->
+    throw err if err
+    process.stdout.write stdout + stderr
+task 'compile:preinit', 'Compile the preinit.js file for Electron', ->
+  execPackageCommand 'coffee -bc src/preinit.coffee', (err, stdout, stderr) ->
     throw err if err
     process.stdout.write stdout + stderr
