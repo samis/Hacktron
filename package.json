@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "electron-prebuilt": "^0.30.4",
-    "npm-path": "^1.0.2"
+    "npm-path": "^1.0.2",
+    "rimraf": "^2.4.2"
   }
 }
