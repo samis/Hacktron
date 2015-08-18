@@ -30,7 +30,7 @@ app.on 'ready', ->
   logger.info('startup', 'Creating main window')
   # Create the browser window.
   mainWindow = window.createWindow({width: 800, height: 800})
-  indexPath = path.resolve(__dirname, 'index.html')
+  indexPath = path.resolve(__dirname, '..', 'static', 'index.html')
   someArgs = {}
   # and load the index.html of the app.
   mainWindow.showUrl indexPath, someArgs, ->

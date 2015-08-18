@@ -1,4 +1,5 @@
-require 'npm-path'.npmPath()
+npmPath = require 'npm-path'
+npmPath()
 execPackageCommand = (command, callback) ->
   {exec} = require 'child_process'
   console.log "Executing '#{command}'"
