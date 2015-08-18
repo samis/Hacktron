@@ -29,7 +29,7 @@ app.on 'window-all-closed', ->
 app.on 'ready', ->
   logger.info('startup', 'Creating main window')
   # Create the browser window.
-  mainWindow = window.createWindow({width: 1000, height: 400})
+  mainWindow = window.createWindow({width: 800, height: 800})
   indexPath = path.resolve(__dirname, 'index.html')
   someArgs = {}
   # and load the index.html of the app.

@@ -1,5 +1,4 @@
-npmPath = require 'npm-path'
-npmPath()
+require 'npm-path'.npmPath()
 execPackageCommand = (command, callback) ->
   {exec} = require 'child_process'
   console.log "Executing '#{command}'"
@@ -16,5 +15,5 @@ task 'compile:preinit', 'Compile the preinit.js file for Electron', ->
 
 task 'start', 'Start Hacktron', ->
   {exec} = require 'child_process'
-  exec 'node src/preinit.js', (err, stdout, stderr) ->
+  exec 'electron .', (err, stdout, stderr) ->
     handleCommand err, stdout, stderr
