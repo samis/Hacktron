@@ -11,37 +11,35 @@ logger.info('startup', 'Starting Hacktron')
 logger.warn('startup', 'Hacktron is in very early development. Expect multiple bugs.')
 
 app = require('app')
-# Module to control application life.
-BrowserWindow = require('browser-window')
-# Module to create native browser window.
+path = require('path')
+window = require('electron-window')
 # Report crashes to our server.
 require('crash-reporter').start()
-# Keep a global reference of the window object, if you don't, the window will
-# be closed automatically when the JavaScript object is GCed.
-mainWindow = null
+logger.info('startup', 'All requried libraries loaded.')
 # Quit when all windows are closed.
 app.on 'window-all-closed', ->
   # On OS X it is common for applications and their menu bar
   # to stay active until the user quits explicitly with Cmd + Q
   if process.platform != 'darwin'
+    logger.info('shutdown', 'Hacktron quitting')
     app.quit()
   return
 # This method will be called when Electron has finished
 # initialization and is ready to create browser windows.
 app.on 'ready', ->
+  logger.info('startup', 'Creating main window')
   # Create the browser window.
-  mainWindow = new BrowserWindow(
-    width: 800
-    height: 600)
+  mainWindow = window.createWindow({width: 1000, height: 400})
+  indexPath = path.resolve(__dirname, 'index.html')
+  someArgs = {}
   # and load the index.html of the app.
-  mainWindow.loadUrl 'file://' + __dirname + '/index.html'
+  mainWindow.showUrl indexPath, someArgs, ->
+    logger.info('main-window', 'Main window is now visible.')
+    return
   # Open the devtools.
   mainWindow.openDevTools()
   # Emitted when the window is closed.
   mainWindow.on 'closed', ->
-    # Dereference the window object, usually you would store windows
-    # in an array if your app supports multi windows, this is the time
-    # when you should delete the corresponding element.
-    mainWindow = null
+    logger.info('main-window', 'Main window closed')
     return
   return
