@@ -29,8 +29,9 @@
     "npmlog": "^1.2.1"
   },
   "devDependencies": {
+    "electron-packager": "^5.0.1",
     "electron-prebuilt": "^0.30.4",
-    "npm-path": "^1.0.2",
+    "groc": "^0.8.0",
     "rimraf": "^2.4.2"
   }
 }
