@@ -29,9 +29,10 @@
     "npmlog": "^1.2.1"
   },
   "devDependencies": {
+    "docco-ng": "^0.1.0",
     "electron-packager": "^5.0.1",
     "electron-prebuilt": "^0.30.4",
-    "groc": "^0.8.0",
+    "groc": "sjorek/groc",
     "rimraf": "^2.4.2"
   }
 }
