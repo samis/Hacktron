@@ -6,7 +6,6 @@ In order to actually use this module, we'll need to export it.
 Since it will be a class, this is easy.
 
     module.exports = MenuManager
-
 We can now actually define our menu manager class.
 
     class MenuManager
