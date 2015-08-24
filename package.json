@@ -4,8 +4,9 @@
   "description": "A client for Hack.Chat using Electron and CoffeeScript.",
   "main": "src/preinit.js",
   "scripts": {
-    "start": "cake start",
-    "prestart": "cake compile:preinit",
+    "start": "electron .",
+    "clean": "rimraf out/* docs/* src/preinit.js",
+    "prestart": "coffee -bc src/preinit.coffee",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

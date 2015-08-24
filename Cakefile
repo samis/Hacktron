@@ -7,14 +7,3 @@ execPackageCommand = (command, callback) ->
 handleCommand = (err, stdout, stderr) ->
   throw err if err
   process.stdout.write stdout + stderr
-
-task 'compile:preinit', 'Compile the preinit.js file for Electron', ->
-  execPackageCommand 'coffee -bc src/preinit.coffee', (err, stdout, stderr) ->
-    handleCommand err, stdout, stderr
-task 'clean', 'Clean up files', ->
-  execPackageCommand 'rimraf src/preinit.js', (err, stdout, stderr) ->
-    handleCommand err, stdout, stderr
-task 'start', 'Start Hacktron', ->
-  {exec} = require 'child_process'
-  exec 'electron .', (err, stdout, stderr) ->
-    handleCommand err, stdout, stderr
