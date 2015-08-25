@@ -33,7 +33,7 @@
     "docco-ng": "^0.1.0",
     "electron-packager": "^5.0.1",
     "electron-prebuilt": "^0.30.4",
-    "groc": "sjorek/groc",
+    "groc": "samis/groc",
     "rimraf": "^2.4.2"
   }
 }
