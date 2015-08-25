@@ -7,3 +7,11 @@ execPackageCommand = (command, callback) ->
 handleCommand = (err, stdout, stderr) ->
   throw err if err
   process.stdout.write stdout + stderr
+
+opts = {
+  dir: '.',
+  name: 'Hacktron',
+  version: '0.30.4',
+  out: 'out',
+  'app-version': '0.1.0',
+}
