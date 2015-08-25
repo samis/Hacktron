@@ -15,3 +15,14 @@ opts = {
   out: 'out',
   'app-version': '0.1.0',
 }
+
+packagerCallback = (err, appPath) ->
+  throw err if err
+  console.log 'Packaging complete. Packaged application is located at #{appPath}'
+
+task 'package:all', 'Package Hacktron for all platforms and Architectures', ->
+  packager = require('electron-packager')
+  console.log 'Packaging Hacktron for all platforms.'
+  packager_opts = opts
+  packager_opts.all = 'true'
+  packager.package(packager_opts, packagerCallback)
