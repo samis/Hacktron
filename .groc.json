@@ -1,0 +1,5 @@
+{
+  "glob": ["src/*","README.md", "Cakefile", "static/index.html", ".groc.json", "package.json"],
+  "github": false,
+  "repository-url": "https://github.com/samis/Hacktron"
+}
