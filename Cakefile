@@ -25,11 +25,25 @@ task 'package:all', 'Package Hacktron for all platforms', ->
   console.log 'Packaging Hacktron for all platforms.'
   packager_opts = opts
   packager_opts.all = 'true'
-  packager.package(packager_opts, packagerCallback)
+  packager(packager_opts, packagerCallback)
 
 task 'package:win', 'Package Hacktron for Windows', ->
   packager = require 'electron-packager'
   packager_opts = opts
   packager_opts.arch = 'all'
   packager_opts.platform = 'win32'
-  packager.package(packager_opts, packagerCallback)
+  packager(packager_opts, packagerCallback)
+
+task 'package:osx', 'Package Hacktron for OS X', ->
+  packager = require 'electron-packager'
+  packager_opts = opts
+  packager_opts.arch = 'all'
+  packager_opts.platform = 'darwin'
+  packager(packager_opts, packagerCallback)
+
+task 'package:linux', 'Package Hacktron for Linux', ->
+  packager = require 'electron-packager'
+  packager_opts = opts
+  packager_opts.arch = 'all'
+  packager_opts.platform = 'linux'
+  packager(packager_opts, packagerCallback)
