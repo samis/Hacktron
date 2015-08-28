@@ -17,4 +17,19 @@ In the constructor, we should obtain a copy of Electron's menu APIs.
 A small wrapper method to add an item to a menu is nice.
 
       addItemToMenu: (menu, item) ->
-      menu.append(item)
+        menu.append(item)
+Embedding the templates directly into the code is unwieldly due to it's structure.
+We can avoid this by having a function that will obtain the template from a file.
+Menus are an array, but for simplicity we'll creatively use require and module exports.
+
+      loadMenuFile: (filename) ->
+        menuData = require filename
+        builtMenu = @menu.buildFromTemplate template
+A way to initalise the application menu is needed.
+I have not placed it in the constructor to prevent accidental invocation.
+
+      initalise: ->
+        applicationMenu = this.loadMenuFile('./application_menu')
+        @menu.setApplicationMenu(applicationMenu)
+That will be everything. A wrapper to create menu items would be nice.
+Unfortunately, the constructor has many options reducing the utility.
