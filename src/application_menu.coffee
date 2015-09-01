@@ -167,7 +167,7 @@ if process.platform == 'darwin'
 else
   template = [
     {
-      label: '&File'
+      label: '&File Hacktron'
       submenu: [
         {
           label: '&Open'
